@@ -21,7 +21,8 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request, Factory $factory)
     {
-        $tweet = Tweet::all();
+        // $tweet = Tweet::all();
+        $tweet = Tweet::orderBy('created_at', 'DESC')->get();
         // dd($tweet);
         // return view('tweet.index', ['name' => 'laravel']);
         // return View::make('tweet.index', ['name' => 'Laravel']);
