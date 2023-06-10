@@ -20,6 +20,6 @@ class IndexController extends Controller
         //     throw new NotFoundHttpException('存在しないつぶやきです。');
         // }
         $tweet = Tweet::where('id', $tweetId)->firstOrFail();
-        dd($tweetId);
+        return view('tweet.update')->with('tweet', $tweet);
     }
 }
