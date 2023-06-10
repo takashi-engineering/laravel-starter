@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Tweet\CreateController;
+use App\Http\Controllers\Tweet\DeleteController;
 use App\Http\Controllers\Tweet\IndexController;
 use App\Http\Controllers\Tweet\Update\IndexController as UpdateIndexController;
 use App\Http\Controllers\Tweet\Update\PutController;
@@ -27,3 +28,4 @@ Route::get('/tweet', IndexController::class)->name('tweet.index');
 Route::post('tweet/create', CreateController::class)->name('tweet.create');
 Route::get('/tweet/update/{tweetId}', UpdateIndexController::class)->name('tweet.update.index');
 Route::put('/tweet/update/{tweetId}', PutController::class)->name('tweet.update.put');
+Route::delete('/tweet/delete/{tweetId}', DeleteController::class)->name('tweet.delete');
