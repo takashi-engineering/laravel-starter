@@ -18,6 +18,8 @@ class IndexController extends Controller
      * invokeメソッド
      *
      * @param Request $request
+     * @param Factory $factory
+     * @param TweetService $tweetService
      * @return void
      */
     public function __invoke(Request $request, Factory $factory, TweetService $tweetService)
