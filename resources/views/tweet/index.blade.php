@@ -9,6 +9,7 @@
 <body>
     <h1>つぶやきアプリ</h1>
     <div>
+        @auth
         <p>投稿フォーム</p>
         <form action="{{ route('tweet.create') }}" method="post">
             @csrf
@@ -22,6 +23,7 @@
         </form>
 
         <hr />
+        @endauth
 
         @foreach ($tweets as $tweet)
             <details>
