@@ -27,7 +27,7 @@
 
         @foreach ($tweets as $tweet)
             <details>
-                <summary>{{ $tweet->content }}</summary>
+                <summary>{{ $tweet->content }} by {{ $tweet->user->name }}</summary>
             </details>
             <div>
                 <a href="{{ route('tweet.update.index', ['tweetId' => $tweet->id]) }}">編集</a>
